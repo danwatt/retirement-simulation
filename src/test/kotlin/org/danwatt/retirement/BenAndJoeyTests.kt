@@ -22,7 +22,6 @@ class BenAndJoeyTests {
     fun oldBenAuthor() {
         val expectedReturn = 1.10 // 10% every year
         val returns = (1..47).map { listOf(expectedReturn) } // Repeat 10% for 47 years
-        val allocations = listOf(1.0) // 100% allocated in this mythical fund
         val (ben,arthur) = BenAndJoey().simulate(
             benStartAge = 22,
             benYearsToContribute = 8,
@@ -39,7 +38,6 @@ class BenAndJoeyTests {
     fun benArthur() {
         val expectedReturn = 1.12
         val returns = (1..47).map { listOf(expectedReturn) }
-        val allocations = listOf(1.0)
         val (ben,arthur) = BenAndJoey().simulate(
             benStartAge = 19,
             benYearsToContribute = 8,
